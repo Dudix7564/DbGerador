@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h2>Cadastro</h2>
+    <form action="/cadastro" method="POST">
+        <label for="IdUsuário">ID Usuário:</label>
+        <input type="text" name="IdUsuário" required>
+
+        <label for="NomeUsuário">Nome:</label>
+        <input type="text" name="NomeUsuário" required>
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
