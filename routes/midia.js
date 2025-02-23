@@ -3,6 +3,11 @@ let express = require('express');
 let router = express.Router();
 let db = require('../utils/db')
 
+// /* Página de cadastro */
+router.get('/midia', function(req, res) {
+    res.render('midia', { title: 'Mídia' });
+});
+
 router.get('/midia', function(req, res) {
     db.query('SELECT (NoMídia, AnoMídia) FROM tbmídia', [], function(erro, listagem) {
         if (erro) {
