@@ -1,15 +1,16 @@
 // nao faço ideia doq tem q fazer mas eu vou continuar dps
+let express = require('express');
+let router = express.Router();
+let db = require('../utils/db')
 
-router.post('/mídia', function(req, res) {
-    let NoMídia = req.body.NoMídia;
-    let AnoMídia = req.body.AnoMídia;
-
-    let sql = 'SELECT (NoMídia, AnoMídia) FROM tbmídia';
-    db.query(sql, [IdUsuário, NomeUsuário], function(erro, resultado) {
+router.get('/midia', function(req, res) {
+    db.query('SELECT (NoMídia, AnoMídia) FROM tbmídia', [], function(erro, listagem) {
         if (erro) {
             console.error(erro);
-            return res.send('Erro ao cadastrar usuário.');
+            return res.send('Erro ao listar mídia.');
         }
-        res.send('Cadastro realizado com sucesso!'); // Aqui você pode redirecionar para o login
+        res.send(listagem);
     });
 });
+
+module.exports = router
