@@ -6,15 +6,18 @@
     <title><%= title %></title>
 </head>
 <body>
-    <h2>Cadastro</h2>
-    <form action="/cadastro" method="POST">
+    <h2>Login</h2>
+    <form action="/login" method="POST">
         <label for="Matrícula">Matrícula</label>
         <input type="text" name="Matrícula" required>
 
         <label for="NomeUsuário">Nome:</label>
         <input type="text" name="NomeUsuário" required>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Entrar</button>
     </form>
+
+    <!-- Botão para redirecionar para a página de cadastro -->
+    <p>Não se cadastrou ainda? <a href="/cadastro">Cadastre-se aqui</a></p>
 </body>
 </html>

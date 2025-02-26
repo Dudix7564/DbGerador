@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var geradorRouter = require('./routes/gerador');
 var cadastroRouter = require('./routes/cadastro');
+var loginRouter = require('./routes/login');
+var matriculaRouter = require('./routes/matricula');
 var midiaRouter = require('./routes/midia');
 
 var app = express();
@@ -26,6 +28,8 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/gerador', geradorRouter);
 app.use('/cadastro', cadastroRouter);
+app.use('/login', loginRouter);
+app.use('/matricula', matriculaRouter);
 app.use('/midia', midiaRouter);
 
 // catch 404 and forward to error handler
