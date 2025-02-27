@@ -13,4 +13,5 @@ router.get('/midiaavaliada', function (req, res) {
 });
 
 
+
 module.exports = router;

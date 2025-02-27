@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Mídia Avaliada</title>
+
+    
 </head>
 <body>
     <h1>Mídias Avaliadas</h1>
@@ -19,6 +21,15 @@
                 <td><%= midia.avaliacao %></td>
             </tr>
         <% }) %>
+
+        <% itens.forEach(item => { %>
+            <div class="item">
+              <p><%= item.nome %></p>
+              <button class="excluir-btn" data-id="<%= item.id %>">Excluir</button>
+            </div>
+          <% }) %>
+          
+
     </table>
 </body>
 </html>
