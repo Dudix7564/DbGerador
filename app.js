@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var geradorRouter = require('./routes/gerador');
 var cadastroRouter = require('./routes/cadastro');
-var midiaavaliadaRouter = require('./routes/midiaavaliada');
+var midiaRouter = require('./routes/midia');
 
 var app = express();
 
@@ -26,7 +26,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/gerador', geradorRouter);
 app.use('/cadastro', cadastroRouter);
-app.use('/midiaavaliada', midiaavaliadaRouter);
+app.use('/midia', midiaRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

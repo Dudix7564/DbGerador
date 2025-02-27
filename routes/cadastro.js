@@ -3,22 +3,22 @@ let router = express.Router();
 let db = require('../utils/db'); // Conexão com o banco de dados
 
 // /* Página de cadastro */
-router.get('/cadastro', function(req, res) {
+router.get('/', function(req, res) {
     res.render('cadastro', { title: 'Cadastro' });
 });
 
 /* Processar cadastro */
-router.post('/cadastro', function(req, res) {
-    let IdUsuário = req.body.IdUsuário;
+router.post('/', function(req, res) {
+    let Matrícula = req.body.Matrícula;
     let NomeUsuário = req.body.NomeUsuário;
 
-    let sql = 'INSERT INTO tbusuários (IdUsuário, NomeUsuário) VALUES (?, ?)';
-    db.query(sql, [IdUsuário, NomeUsuário], function(erro, resultado) {
+    let sql = 'INSERT INTO tbusuários (Matrícula, NomeUsuário) VALUES (?, ?)';
+    db.query(sql, [Matrícula, NomeUsuário], function(erro, resultado) {
         if (erro) {
             console.error(erro);
             return res.send('Erro ao cadastrar usuário.');
         }
-        res.send('Cadastro realizado com sucesso!'); // Aqui você pode redirecionar para o login
+        res.redirect('/login/'); // Redireciona para a página de login
     });
 });
 module.exports = router;
