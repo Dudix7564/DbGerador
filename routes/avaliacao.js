@@ -4,7 +4,7 @@ let db = require('../utils/db'); // Conexão com o banco de dados
 
 // /* Página de cadastro */
 router.get('/', function(req, res) {
-    res.render('avaliação', { title: 'Avaliação' });
+    res.render('avaliacao', { title: 'Avaliação' });
 });
 
 /* Processar cadastro */
