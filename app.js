@@ -10,7 +10,7 @@ var geradorRouter = require('./routes/gerador');
 var cadastroRouter = require('./routes/cadastro');
 var loginRouter = require('./routes/login');
 var midiaRouter = require('./routes/midia');
-var avaliaçãoRouter = require('./routes/avaliacao');
+var avaliacaoRouter = require('./routes/avaliacao');
 
 var app = express();
 
@@ -30,7 +30,7 @@ app.use('/gerador', geradorRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/login', loginRouter);
 app.use('/midia', midiaRouter);
-app.use('/avaliacao', avaliaçãoRouter);
+app.use('/avaliacao', avaliacaoRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
