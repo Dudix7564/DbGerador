@@ -2,7 +2,7 @@ let express = require('express');
 let router = express.Router();
 let db = require('../utils/db'); // Conexão com o banco de dados
 
-router.get('/usuario/:matricula', function(req, res) {
+router.get('/:matricula', function(req, res) {
     let matricula = req.params.matricula;
 
     // Buscar informações do usuário para mostrar na página
