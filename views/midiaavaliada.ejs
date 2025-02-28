@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mídia Avaliada</title>
+
+    
+</head>
+<body>
+    <h1>Mídias Avaliadas</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Avaliação</th>
+        </tr>
+        <% resultado.forEach(midia => { %>
+            <tr>
+                <td><%= midia.id %></td>
+                <td><%= midia.nome %></td>
+                <td><%= midia.avaliacao %></td>
+            </tr>
+        <% }) %>
+
+        <% itens.forEach(item => { %>
+            <div class="item">
+              <p><%= item.nome %></p>
+              <button class="excluir-btn" data-id="<%= item.id %>">Excluir</button>
+            </div>
+          <% }) %>
+          
+
+    </table>
+</body>
+</html>
