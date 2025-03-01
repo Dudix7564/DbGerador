@@ -7,7 +7,22 @@
 </head>
 <body>
     <h2>Bem-vindo, <%= usuario.NomeUsuário %></h2>
-    <p>Matrícula: <%= usuario.matricula %></p>
-    <a href="/logout">Sair</a>
+    <p>Matrícula: <%= usuario.Matrícula %></p>
+    
+    <h3>Avaliações</h3>
+    <% if (avaliacoes.length > 0) { %>
+        <ul>
+            <% avaliacoes.forEach(avaliacao => { %>
+                <li>Nota: <%= avaliacao.NotaAvaliação %></li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <p>Sem avaliações até o momento.</p>
+    <% } %>
+
+    <!-- Botão para redirecionar para a página de avaliação -->
+    <a href="/avaliacao/<%= usuario.Matrícula %>">
+        <button>Adicionar Nova Avaliação</button>
+    </a>
 </body>
 </html>

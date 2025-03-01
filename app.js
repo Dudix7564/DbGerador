@@ -9,7 +9,6 @@ var usuarioRouter = require('./routes/usuario');
 var geradorRouter = require('./routes/gerador');
 var cadastroRouter = require('./routes/cadastro');
 var loginRouter = require('./routes/login');
-var midiaRouter = require('./routes/midia');
 var avaliacaoRouter = require('./routes/avaliacao');
 
 var app = express();
@@ -29,7 +28,6 @@ app.use('/usuario', usuarioRouter);
 app.use('/gerador', geradorRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/login', loginRouter);
-app.use('/midia', midiaRouter);
 app.use('/avaliacao', avaliacaoRouter);
 
 

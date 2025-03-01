@@ -13,7 +13,7 @@ router.post('/', function(req, res) {
     let Filme = req.body.CodMídia;
     let Nota = req.body.NotaAvaliação;
 
-    let sql = 'INSERT INTO tbusuáriomídia (Matrícula, CodMídia, NotaAvaliação) VALUES (?, ?, ?)';
+    let sql = 'INSERT INTO tbusuáriomidia (Matrícula, CodMídia, NotaAvaliação) VALUES (?, ?, ?)';
     db.query(sql, [Matrícula, Filme, Nota], function(erro, resultado) {
         if (erro) {
             console.error(erro);

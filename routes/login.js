@@ -22,7 +22,7 @@ router.post('/', function(req, res) {
 
         if (resultado.length > 0) {
             // Usuário encontrado, redirecionar para a página pessoal
-            res.redirect('/matricula/' + Matrícula); // A URL que leva à página do usuário
+            res.redirect('/usuario/' + Matrícula); // A URL que leva à página do usuário
         } else {
             res.send('Matrícula ou nome de usuário incorretos.');
         }
