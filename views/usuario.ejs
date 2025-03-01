@@ -8,21 +8,32 @@
 <body>
     <h2>Bem-vindo, <%= usuario.NomeUsuário %></h2>
     <p>Matrícula: <%= usuario.Matrícula %></p>
-    
     <h3>Avaliações</h3>
     <% if (avaliacoes.length > 0) { %>
         <ul>
             <% avaliacoes.forEach(avaliacao => { %>
-                <li>Nota: <%= avaliacao.NotaAvaliação %></li>
+                <li>
+                    <strong>Nota:</strong> <%= avaliacao.NotaAvaliação %> <br>
+                    <strong>Mídia:</strong> <%= avaliacao.NoMídia ? avaliacao.NoMídia : "Sem mídia" %>
+                </li>
             <% }) %>
         </ul>
     <% } else { %>
         <p>Sem avaliações até o momento.</p>
     <% } %>
+    
 
     <!-- Botão para redirecionar para a página de avaliação -->
-    <a href="/avaliacao/<%= usuario.Matrícula %>">
+    <a href="/avaliacao/">
         <button>Adicionar Nova Avaliação</button>
     </a>
+    <!-- Botão para voltar à página com todos os filmes -->
+<a href="/gerador">
+    <button>Ver Todos os Filmes</button>
+</a>
+
 </body>
 </html>
+
+
+
