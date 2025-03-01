@@ -2,18 +2,16 @@ let express = require('express');
 let router = express.Router();
 let db = require('../utils/db'); // Conexão com o banco de dados
 
-// Página do usuário
 
 
-router.get('/:Matrícula', function (req, res){
-    console.log("Rota /usuario carregada!");
-    let Matrícula = req.params.Matrícula;
+router.get('/:matricula', function(req, res) {
+    let matricula = req.params.matricula;
 
     let sqlUsuario = 'SELECT * FROM tbusuários WHERE Matrícula = ?';
-    let sqlAvaliacoes = 'SELECT * FROM tbusuáriomidia WHERE Matrícula = ?';  // Supondo que a avaliação tenha um campo MatrículaUsuario que referencia o usuário
+    let sqlAvaliacoes = 'SELECT tbusuáriomidia.NotaAvaliação, tbmídia.NoMídia FROM tbusuáriomidia INNER JOIN tbmídia ON tbusuáriomidia.CodMídia = tbmídia.CodMídia WHERE tbusuáriomidia.Matrícula = ?';
 
     // Consultando o usuário
-    db.query(sqlUsuario, [Matrícula], (erro, resultadoUsuario) => {
+    db.query(sqlUsuario, [matricula], function(erro, resultadoUsuario) {
         if (erro) {
             console.error('Erro ao buscar usuário:', erro);
             return res.send('Erro ao carregar usuário.');
@@ -21,10 +19,10 @@ router.get('/:Matrícula', function (req, res){
 
         if (resultadoUsuario.length === 0) {
             return res.send('Usuário não encontrado.');
-        }
+        } 
 
         // Consultando as avaliações do usuário
-        db.query(sqlAvaliacoes, [Matrícula], (erro, resultadoAvaliacoes) => {
+        db.query(sqlAvaliacoes, [matricula], function (erro, resultadoAvaliacoes) {
             if (erro) {
                 console.error('Erro ao buscar avaliações:', erro);
                 return res.send('Erro ao carregar avaliações.');
@@ -39,5 +37,6 @@ router.get('/:Matrícula', function (req, res){
         });
     });
 });
+
 
 module.exports = router;

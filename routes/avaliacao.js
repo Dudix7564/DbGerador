@@ -19,7 +19,7 @@ router.post('/', function(req, res) {
             console.error(erro);
             return res.send('Erro na avaliação');
         }
-        res.redirect('/login/'); // Redireciona para a página de login
+        res.redirect('/usuario//:matricula'); // Redireciona para a página de login
     });
 });
 module.exports = router;
