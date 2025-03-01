@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        form { display: inline-block; text-align: left; background: #f4f4f4; padding: 20px; border-radius: 10px; }
+        label { display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; background: blue; color: white; padding: 10px; border: none; cursor: pointer; }
+        button:hover { background: darkblue; }
+    </style>
+</head>
+<body>
+
+    <h1>Avaliação de Filme</h1>
+
+    <form action="/avaliacao" method="POST">
+        <label for="Matrícula">Matrícula:</label>
+        <input type="text" id="Matrícula" name="Matrícula" required>
+
+        <label for="CodMídia">Código do Filme ou Série:</label>
+        <input type="text" id="CodMídia" name="CodMídia" required>
+
+        <label for="NotaAvaliação">Nota:</label>
+        <select id="NotaAvaliação" name="NotaAvaliação">
+            <option value="1">1 - Péssimo</option>
+            <option value="2">2 - Ruim</option>
+            <option value="3">3 - Regular</option>
+            <option value="4">4 - Bom</option>
+            <option value="5">5 - Excelente</option>
+        </select>
+
+        <button type="submit">Enviar Avaliação</button>
+    </form>
+
+</body>
+</html>
