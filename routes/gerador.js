@@ -7,8 +7,7 @@ router.get('/', function (req, res) {
         if (erro) {
             res.send(erro);
         }
-        res.send(listagem);
-        res.render('mídia', { resultado: listagem });
+        res.render('gerador', { resultado: listagem });
     });
 });
 module.exports = router;
