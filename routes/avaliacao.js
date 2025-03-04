@@ -6,7 +6,7 @@ let db = require('../utils/db'); // Conexão com o banco de dados
 router.get('/:matricula', function(req, res) {
     let matricula = req.params.matricula;
     res.render('avaliacao', { title: 'Avaliação', matricula: matricula });
-});
+}); 
 
 /* Processar cadastro */
 router.post('/:matricula', function(req, res) {
