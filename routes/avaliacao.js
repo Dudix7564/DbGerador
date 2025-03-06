@@ -1,5 +1,5 @@
 let express = require('express');
-let router = express.Router();
+let router = express.Router(); // esgatando a rota no app.js
 let db = require('../utils/db'); // Conexão com o banco de dados
 
 // /* Página de cadastro */
