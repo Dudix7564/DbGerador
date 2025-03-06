@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #3f0c8d, #f50057); /* Gradiente de roxo para rosa */
+            color: #fff; /* Texto branco */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            background-color: #ff69b4; /* Rosa choque */
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 15px 40px rgba(255, 105, 180, 0.7); /* Sombra suave e grande */
+            max-width: 600px; /* Limitar o tamanho da caixa */
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #f8f9fa;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        .btn-custom {
+            background-color: #000; /* Botão preto */
+            color: #f5077e; /* Texto rosa */
+            border: 2px solid #ff69b4;
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border-radius: 30px; /* Bordas arredondadas */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-custom:hover {
+            background-color: #f51a87;
+            color: #fff;
+            border-color: #fff;
+            transform: scale(1.1); /* Aumenta um pouco o botão ao passar o mouse */
+        }
+
+        .btn-custom:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(255, 5, 130, 0.7); /* Sombra ao focar no botão */
+        }
+
+        .d-flex {
+            justify-content: center;
+            gap: 20px;
+        }
+
+        /* Estilo da imagem de fundo, se precisar de uma */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: url('https://via.placeholder.com/1500'); /* Alterar para imagem de fundo desejada */
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+
+    <!-- Caso queira uma imagem de fundo -->
+    <div class="background-image"></div>
+
+    <div class="container text-center">
+        <h1 class="mb-4">Bem-vindo ao Gerador de Filmes e Séries</h1>
+        <p class="lead">Escolha uma opção para continuar:</p>
+        
+        <div class="d-flex justify-content-center gap-3">
+            <a href="/login" class="btn btn-custom btn-lg">Login</a>
+            <a href="/cadastro" class="btn btn-custom btn-lg">Cadastro</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
