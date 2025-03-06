@@ -14,7 +14,7 @@ router.post('/:matricula', function(req, res) {
     let Filme = req.body.CodMídia;
     let Nota = req.body.NotaAvaliação;
 
-    let sql = 'INSERT INTO tbusuáriomidia (matricula, CodMídia, NotaAvaliação) VALUES (?, ?, ?)';
+    let sql = 'INSERT INTO tbusuáriomidia (Matrícula, CodMídia, NotaAvaliação) VALUES (?, ?, ?)';
     db.query(sql, [matricula, Filme, Nota], function(erro, resultado) {
         if (erro) {
             console.error(erro);

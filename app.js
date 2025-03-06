@@ -10,6 +10,7 @@ var geradorRouter = require('./routes/gerador');
 var cadastroRouter = require('./routes/cadastro');
 var loginRouter = require('./routes/login');
 var avaliacaoRouter = require('./routes/avaliacao');
+var homeRouter = require('./routes/home');
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use('/gerador', geradorRouter);
 app.use('/cadastro', cadastroRouter);
 app.use('/login', loginRouter);
 app.use('/avaliacao', avaliacaoRouter);
+app.use('/home',homeRouter);
 
 
 // catch 404 and forward to error handler
