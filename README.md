@@ -7,7 +7,7 @@ Como executar o projeto?
 - Git: Necessário para clonagem desse repositório e ter acesso ao código atualizado.
 
 Instalação:
-git clone 
+git clone https://github.com/Dudix7564/DbGerador.git
 cd DbGerador
 
 npm install 
